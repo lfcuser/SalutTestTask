@@ -8,6 +8,11 @@ namespace App\Http\Controllers\Swagger\Schemas;
  *   name="Auth",
  *   description="Авторизация"
  * )
+ *
+ * @OA\Tag(
+ *   name="Price",
+ *   description="Цены"
+ * )
  */
 class Tags
 {

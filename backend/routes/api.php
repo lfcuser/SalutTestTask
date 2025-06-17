@@ -20,3 +20,5 @@ Route::group([
         Route::post('refresh', 'refresh');
     });
 });
+
+Route::resource('prices', \App\Http\Controllers\PriceController::class);

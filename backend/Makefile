@@ -12,10 +12,14 @@ up:
 first-run:
 	make jwt-init
 	make migrate
+	make seed
 	make create-default-user
 
 migrate:
 	env UID=${UID} docker compose exec -u app service-php php artisan migrate
+
+seed:
+	env UID=${UID} docker compose exec -u app service-php php artisan db:seed
 
 create-default-user:
 	env UID=${UID} docker compose exec -u app service-php php artisan auth:create-user admin 12345
